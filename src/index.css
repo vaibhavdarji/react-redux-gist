@@ -11,3 +11,200 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: inherit;
+}
+
+.appBar {
+  background-color: #3367d6;
+  min-height: 64px;
+  padding: 0px 24px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+}
+
+.searchInput {
+  border: 1px solid grey;
+  border-radius: 8px;
+  height: 25px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+
+}
+
+.searchInput:hover, .searchInput:focus {
+  border: 1px solid #3367d6;
+  background-color: #ffffff;
+}
+
+.clearIcon {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 14px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  justify-content: center;
+}
+
+.loader {
+  display: inline-block;
+  font-size: 0px;
+  padding: 0px;
+}
+.loader span {
+  vertical-align: middle;
+  border-radius: 100%;
+
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px 2px;
+  -webkit-animation: loaderAnimation 0.8s linear infinite alternate;
+  animation: loaderAnimation 0.8s linear infinite alternate;
+}
+.loader span:nth-child(1) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  background: rgba(51, 103, 214, 0.6);
+}
+.loader span:nth-child(2) {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+  background: rgba(51, 103, 214, 0.8);
+}
+.loader span:nth-child(3) {
+  -webkit-animation-delay: -0.26666s;
+  animation-delay: -0.26666s;
+  background: rgba(51, 103, 214, 1);
+}
+.loader span:nth-child(4) {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+  background: rgba(51, 103, 214, 0.8);
+}
+.loader span:nth-child(5) {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+  background: rgba(51, 103, 214, 0.4);
+}
+
+@keyframes loaderAnimation {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes loaderAnimation {
+  from {
+    -webkit-transform: scale(0, 0);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.gists {
+  padding: 24px;
+}
+
+.gistsStatus {
+  background-color: #1976d2;
+  margin: 0;
+  padding: 16px;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.gistItems {
+  margin: 16px 0;
+}
+.gistItem {
+  padding: 16px;
+  border: 1px solid #3367d6;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.gistLink {
+  text-decoration: none;
+  color: #000;
+}
+
+.gistLink:hover {
+  text-decoration: underline;
+}
+
+.gistFile,
+.gistFork {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+.gistFile .gistLink,
+.gistFork .gistLink {
+  text-decoration: underline;
+}
+
+.gistFork {
+  display: flex;
+  align-items: center;
+}
+
+.gistBadge {
+  background-color: #dc004e;
+  font-size: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  color: #ffffff;
+  padding: 8px;
+  margin-right: 8px;
+}
+.gistAvatar {
+  width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.error {
+  background-color: #dc004e;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+
+.noFork {
+  color: #dc004e;
+}
+

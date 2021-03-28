@@ -4,13 +4,13 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import Search from "./components/Search";
-import GistDetail from "./components/Gist";
+import GistDetail from "./components/GistDetail";
+import Home from './components/Home';
 const App = () => {
   return (
     <Router>
       <div>
-        <Route path="/" exact={true} component={Search} />
+        <Route path="/" exact={true} component={Home} />
         <Route path="/:id"  component={GistDetail} />
       </div>
     </Router>

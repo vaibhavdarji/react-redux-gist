@@ -15,7 +15,7 @@ const allGistReducer = (state = initialState, action) => {
             gists: [],
             userName: ''
         };
-    if (action.type === actions.FETCH_ALL_GISTS_SUCCESS)
+    if (action.type === actions.FETCH_ALL_GISTS_SUCCESS)  {
         return {
             ...state,
             loading: false,
@@ -23,12 +23,13 @@ const allGistReducer = (state = initialState, action) => {
             gists: [...action.payload],
             userName: action.userName
         };
+    }
     if (action.type === actions.FETCH_ALL_GISTS_FAILED)
         return {
             ...state,
             loading: false,
             gists: [],
-            userName: action.userName,
+            // userName: action.userName,
             error: action.payload
         };
     return state;

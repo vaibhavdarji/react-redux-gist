@@ -2,7 +2,7 @@ import * as actions from "../actionType";
 const initialState = {
     loading: false,
     error: null,
-    forks: []
+    gist: {}
 };
 
 const singleGistReducer = (state = initialState, action) => {
@@ -11,20 +11,20 @@ const singleGistReducer = (state = initialState, action) => {
             ...state,
             loading: true,
             error: null,
-            forks: []
+            gist: {}
         };
     if (action.type === actions.FETCH_GIST_SUCCESS)
         return {
             ...state,
             loading: false,
             error: null,
-            forks: [...action.payload]
+            gist: {...action.payload}
         };
     if (action.type === actions.FETCH_GIST_FAILED)
         return {
             ...state,
             loading: false,
-            forks: [],
+            gist: {},
             error: action.payload
         };
     return state;
